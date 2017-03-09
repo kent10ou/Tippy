@@ -41,8 +41,6 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
-    
     @IBAction func calculateTip(sender: AnyObject) {
         
         let tipPercentages = [0.15, 0.18, 0.20]
@@ -55,11 +53,8 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
         
         if billField !== "" {
-           // billField.bounds =
+                billField.frame.size.height = CGFloat(145)
         }
-        
     }
-    
-    
 }
 

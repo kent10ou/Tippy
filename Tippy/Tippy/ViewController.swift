@@ -20,6 +20,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         [billField.becomeFirstResponder()]
+        
+        NSLog("bounds.origin.x: %f", billField.bounds.origin.x);
+        NSLog("bounds.origin.y: %f", billField.bounds.origin.y);
+        NSLog("bounds.size.width: %f", billField.bounds.size.width);
+        NSLog("bounds.size.height: %f", billField.bounds.size.height);
+        
+        NSLog("frame.origin.x: %f", billField.frame.origin.x);
+        NSLog("frame.origin.y: %f", billField.frame.origin.y);
+        NSLog("frame.size.width: %f", billField.frame.size.width);
+        NSLog("frame.size.height: %f", billField.frame.size.height);
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +40,9 @@ class ViewController: UIViewController {
     @IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
     }
-
+    
+    
+    
     @IBAction func calculateTip(sender: AnyObject) {
         
         let tipPercentages = [0.15, 0.18, 0.20]
@@ -41,6 +53,13 @@ class ViewController: UIViewController {
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        if billField !== "" {
+           // billField.bounds =
+        }
+        
     }
+    
+    
 }
 

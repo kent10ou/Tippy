@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.15294117647058825" green="0.80784313725490198" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="80"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -79,7 +79,13 @@
                             <outletCollection property="gestureRecognizers" destination="2fy-0G-HiB" appends="YES" id="36y-x5-54C"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tippy" id="Ewh-bD-dWd"/>
+                    <navigationItem key="navigationItem" title="Tippy" id="Ewh-bD-dWd">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="jQc-5G-QQz">
+                            <connections>
+                                <segue destination="lWA-Bt-DgZ" kind="push" id="tYJ-bj-8B8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="xS3-VV-mwO" id="8bu-nU-wci"/>
                         <outlet property="tipControl" destination="xQq-eW-5uB" id="tln-XJ-vSl"/>
@@ -95,6 +101,22 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="645" y="376"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="p8n-ZC-gTL">
+            <objects>
+                <viewController id="lWA-Bt-DgZ" customClass="SettingsViewController" customModule="Tippy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WhD-5I-Uub">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wlk-17-sgZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5N-ng-7MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="376"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yKt-rf-4Ia">

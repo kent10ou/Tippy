@@ -31,7 +31,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         print("view did appear")
-        getSavedTip()
     }
     
     override func viewWillDisappear(animated: Bool) {

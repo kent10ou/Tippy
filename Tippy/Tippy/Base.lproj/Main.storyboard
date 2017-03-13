@@ -83,7 +83,7 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OWt-Si-j0Q">
-                                <rect key="frame" x="183" y="413" width="117" height="30"/>
+                                <rect key="frame" x="118" y="413" width="182" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -159,12 +159,18 @@
                                     <segment title="20%"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.80000000000000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="saveSelectedTip:" destination="lWA-Bt-DgZ" eventType="valueChanged" id="jiL-b4-qfK"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="wlk-17-sgZ"/>
+                    <connections>
+                        <outlet property="selectedTip" destination="bzn-uv-ydo" id="RK5-J5-Z2o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5N-ng-7MD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

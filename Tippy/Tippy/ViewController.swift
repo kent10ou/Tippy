@@ -19,11 +19,46 @@ class ViewController: UIViewController {
     @IBOutlet weak var personsLabel: UILabel!
     @IBOutlet weak var splitTotalLabel: UILabel!
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaultTip = "defaultTip"
+
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        print("view did appear")
+        getSavedTip()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("view will disappear")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("view did disappear")
+    }
+    
+    func getSavedTip() {
+        print("defaults", defaults.integerForKey(defaultTip))
+        switch(defaults.integerForKey(defaultTip))
+        {
+        case 0: tipControl.selectedSegmentIndex = 0
+        case 1: tipControl.selectedSegmentIndex = 1
+        case 2: tipControl.selectedSegmentIndex = 2
+        default: break
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("view did load")
         [billField.becomeFirstResponder()]
         
         NSLog("bounds.origin.x: %f", billField.bounds.origin.x);
@@ -35,6 +70,8 @@ class ViewController: UIViewController {
         NSLog("frame.origin.y: %f", billField.frame.origin.y);
         NSLog("frame.size.width: %f", billField.frame.size.width);
         NSLog("frame.size.height: %f", billField.frame.size.height);
+        
+        getSavedTip()
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,9 +106,9 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
         splitTotalLabel.text = String(format: "$%.2f",  splitTotal)
         
-        if billField !== "" {
-                billField.frame.size.height = CGFloat(145)
-        }
+//        if billField !== "" {
+//                billField.frame.size.height = CGFloat(145)
+//        }
     }
 }
 
